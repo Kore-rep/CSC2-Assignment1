@@ -4,6 +4,7 @@
 
 public class BinarySearchTree<dataType extends Comparable<? super dataType>> extends BinaryTree<dataType>
 {
+   public int opCount = 0;
    public void insert ( dataType d )
    {
       if (root == null)
@@ -38,12 +39,18 @@ public class BinarySearchTree<dataType extends Comparable<? super dataType>> ext
    }
    public BinaryTreeNode<dataType> find ( dataType d, BinaryTreeNode<dataType> node )
    {
+      this.opCount++; //Instrumentation
       if (d.compareTo (node.data) == 0) 
          return node;
-      else if (d.compareTo (node.data) < 0)
+      else if (d.compareTo (node.data) < 0) {
+         this.opCount++; //Instrumentation
          return (node.left == null) ? null : find (d, node.left);
-      else
+      }
+      else {
+         this.opCount++; //Instrumentation
+         this.opCount++; //Instrumentation
          return (node.right == null) ? null : find (d, node.right);
+      }
    }
    
    public void delete ( dataType d )
@@ -53,10 +60,13 @@ public class BinarySearchTree<dataType extends Comparable<? super dataType>> ext
    public BinaryTreeNode<dataType> delete ( dataType d, BinaryTreeNode<dataType> node )
    {
       if (node == null) return null;
+      this.opCount++; //Instrumentation
       if (d.compareTo (node.data) < 0)
          node.left = delete (d, node.left);
-      else if (d.compareTo (node.data) > 0)
+      else if (d.compareTo (node.data) > 0) {
+         this.opCount++; //Instrumentation
          node.right = delete (d, node.right);
+      }
       else if (node.left != null && node.right != null )
       {
          node.data = findMin (node.right).data;

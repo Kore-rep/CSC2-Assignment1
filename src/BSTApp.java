@@ -21,6 +21,7 @@ public class BSTApp {
             System.out.println ("Search : ");
             bt.visit((bt.find(new LSDataPiece(checker))));
         }
+        System.out.println("Took " + bt.opCount + " comparisons");
     }
 
     public static void processFile(String file) throws IOException {

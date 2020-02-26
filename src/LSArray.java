@@ -6,7 +6,7 @@ import java.util.Scanner;
 */
 public class LSArray {
     LSDataPiece[] dataArray;
-    int opCount;
+    int opCount = 0;
     File inFile;
 
 
