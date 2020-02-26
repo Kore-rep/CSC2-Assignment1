@@ -19,7 +19,6 @@ public class LSArray {
             while (inScanner.hasNextLine()) {
                 this.dataArray[counter] = new LSDataPiece(inScanner.nextLine());
                 counter++;
-            inScanner.close();
             }
         } catch (IOException e) {
             System.out.println("Cannot find specified file.");
