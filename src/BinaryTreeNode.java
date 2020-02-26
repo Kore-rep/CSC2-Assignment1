@@ -1,5 +1,6 @@
 // Adapted from Hussein Suleman's Binary Tree
 // Angus Longmore
+//
 
 public class BinaryTreeNode<dataType>
 {

@@ -9,7 +9,7 @@ public class BSTApp {
     public static void main(String[] args) {
         bt = new BinarySearchTree<LSDataPiece> ();
         try {
-            processFile("LSData.txt");
+            processFile("src/LSData.txt");
         } catch (IOException e) {
             System.out.println("Cannot find txt file");
 

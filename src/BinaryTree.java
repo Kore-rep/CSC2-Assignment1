@@ -4,7 +4,6 @@
 public class BinaryTree<dataType>
 {
 
-   public Integer operationCount = 0;
    // one instance variable for it's root node
    BinaryTreeNode<dataType> root;
 
@@ -22,7 +21,6 @@ public class BinaryTree<dataType>
    public int getHeight ( BinaryTreeNode<dataType> node )
    {
       // returns the longest branch of the tree
-      operationCount++;
       if (node == null)
          return -1;
       else
@@ -37,7 +35,6 @@ public class BinaryTree<dataType>
    public int getSize ( BinaryTreeNode<dataType> node )
    {
       // returns the number of nodes in the tree
-      this.operationCount++;
       if (node == null)
          return 0;
       else
@@ -74,7 +71,6 @@ public class BinaryTree<dataType>
    public void postOrder ( BinaryTreeNode<dataType> node )
    {
       // traverses all nodes starting with the leftmost, lowest node
-      operationCount++;
       if (node != null)
       {
          postOrder (node.getLeft ());
@@ -91,7 +87,6 @@ public class BinaryTree<dataType>
    public void inOrder ( BinaryTreeNode<dataType> node )
    {
       // traverses nodes in order i.e. left bottom, left middle, right bottom etc.
-      operationCount++;
       if (node != null)
       {
          inOrder (node.getLeft ());
@@ -102,20 +97,16 @@ public class BinaryTree<dataType>
 
    public void levelOrder ()
    {
-      operationCount++;
       if (root == null)
          return;
       BTQueue<dataType> q = new BTQueue<dataType> ();
       q.enQueue (root);
       BinaryTreeNode<dataType> node;
-      operationCount++;
       while ((node = q.getNext ()) != null)
       {
          visit (node);
-         operationCount++;
          if (node.getLeft () != null)
             q.enQueue (node.getLeft ());
-         operationCount++;
          if (node.getRight () != null)
             q.enQueue (node.getRight ());
       }

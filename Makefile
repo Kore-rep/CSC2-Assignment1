@@ -5,14 +5,12 @@
 
 JAVAC=/usr/bin/javac
 .SUFFIXES: .java .class
-SRCDIR=src/
-BINDIR=bin/
+SRCDIR=src
+BINDIR=bin
 
-JFLAGS = -g
-$(BINDIR)/%.class:$(SCRDIR)/%.java
-
-.java.class:
-	$(JAVAC) $<
+#JFLAGS = -g
+$(BINDIR)/%.class:$(SRCDIR)/%.java
+	$(JAVAC) -d $(BINDIR)/ -cp $(BINDIR) $<
 
 CLASSES= \
 	LSDataPiece.class \
@@ -28,11 +26,8 @@ CLASSES= \
 CLASS_FILES=$(CLASSES:%.class=$(BINDIR)/%.class)
 default: $(CLASS_FILES)
 
-all:
-	@echo $(CLASS_FILES)
-
 clean:
-	$(BINDIR)/*.class
+	rm $(BINDIR)/*.class
 run:
 	java -cp bin LSArrayApp
 run2:

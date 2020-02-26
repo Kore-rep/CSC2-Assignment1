@@ -3,6 +3,7 @@ public class LSDataPiece implements Comparable<LSDataPiece> {
     private String sourceLine;
     private String key;
     private String areas;
+    public Integer opCount;
 
     public LSDataPiece(String line) {
         this.sourceLine = line;
@@ -11,6 +12,7 @@ public class LSDataPiece implements Comparable<LSDataPiece> {
 
     private void processLine(String line) {
         int spaceIndex = line.indexOf(" ");
+
         if (spaceIndex == -1) {
             this.key = line;
         } else {

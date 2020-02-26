@@ -21,7 +21,7 @@ public class LSArray {
                 counter++;
             }
         } catch (IOException e) {
-            System.out.println("Cannot find specified file.");
+            System.out.println("Cannot find specified file text file.");
         }
     }
 
@@ -33,8 +33,9 @@ public class LSArray {
 
     public void printArea(String key1, String key2, String key3) {
         String checker = key1 + "_" + key2 + "_" + key3;
-
+        
         for (int i=0; i<2976; i++) {
+            opCount++;
             if (this.dataArray[i].getKey().equals(checker)) {
                 System.out.println("Stage/Day/Time combo " + this.dataArray[i].getKey() + " yielded Areas:\n" );
                 System.out.println(this.dataArray[i].getAreas());
