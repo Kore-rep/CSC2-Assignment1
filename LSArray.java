@@ -2,6 +2,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
+/* An Array Class
+*/
 public class LSArray {
     LSDataPiece[] dataArray;
     int opCount;
