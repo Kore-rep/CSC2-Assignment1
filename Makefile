@@ -8,7 +8,6 @@ JAVAC=/usr/bin/javac
 SRCDIR=src
 BINDIR=bin
 
-#JFLAGS = -g
 $(BINDIR)/%.class:$(SRCDIR)/%.java
 	$(JAVAC) -d $(BINDIR)/ -cp $(BINDIR) $<
 

@@ -1,24 +1,35 @@
-// Adapted from Hussein Suleman's Binary Tree
-// Angus Longmore
+/** @author Angus Longmore
+ *  @author lngang002@myuct.ac.za
+ *  @version 1.0
+ *  Based on Hussein Suleman's BTQueue
+ *  
+ */
 
+ /** An object that creates a virtual queue for level order traversal
+  * Similar to a linked list
+  * @param <dataType>
+  */
 public class BTQueue<dataType>
 {
-   // similar to a linked list
-   // A BTQueue Object with variables for it's head node and tail node
    BTQueueNode<dataType> head;
    BTQueueNode<dataType> tail;
 
+   /** Construcs an empty BTQueue object
+    * 
+    */
    public BTQueue ()
    {
-      // construct an empty Queue
       head = null;
       tail = null;
    }
 
+   /** Returns the current queue head and pops it from the list
+    * also checks if the list is empty or not
+    * 
+    * @return
+    */
    public BinaryTreeNode<dataType> getNext ()
    {
-      // returns the current head and pops it from the list
-      // also checks if the list is empty or not
       if (head == null)
          return null;
 
@@ -29,10 +40,13 @@ public class BTQueue<dataType>
       return qnode.node;
    }
 
+   /** Addes a QueueNode to the Queue
+    * if the list is empty, the head and tail are both assigned to the specified node
+    * 
+    * @param node
+    */
    public void enQueue ( BinaryTreeNode<dataType> node )
    {
-      // Queues a QueueNode
-      // If the list is empty, the head and tail are both assigned to the specified node
       if (tail == null)
       {
          tail = new BTQueueNode<dataType> (node, null);

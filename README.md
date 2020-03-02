@@ -19,3 +19,10 @@ UCT CSC2 Assignment 1
 		$ java -cp bin BSTApp "x" "y" "z" // where x is an integer between 1 and 8 representing stage,
 						y is an int between 1 and 31 representing a day of the month and
 						z is a two digit number representing a starting time in hours. 
+
+	Or:
+		$ make run	// No parameter Array App
+		$ make run2	// "8" "16" "20" Array App
+		$ make run3	// No parameter Binary Tree App
+		$ make run4	// "8" "16" "20" Binary Tree App
+

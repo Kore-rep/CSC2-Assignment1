@@ -1,28 +1,45 @@
-// Adapted from Hussein Suleman's Binary Tree
-// Angus Longmore
-//
+/** @author Angus Longmore
+ *  @author lngang002@myuct.ac.za
+ *  @version 1.0
+ *  Based on Hussein Suleman's Binary Tree Node
+ */
 
+
+/** A node that can store data for a Binary Tree
+ * 
+ * @param <dataType> generic data type
+ */
 public class BinaryTreeNode<dataType>
 {
 
-   // create Node with variables for it's data, and child nodes
    dataType data;
    BinaryTreeNode<dataType> left;
    BinaryTreeNode<dataType> right;
 
+   /** Constructor Method to assign data and child nodes
+    * 
+    * @param d Data to be stored
+    * @param l the node to this node's left
+    * @param r the node to this node's right
+    */
    public BinaryTreeNode ( dataType d, BinaryTreeNode<dataType> l, BinaryTreeNode<dataType> r )
    {
-      // constructor for a node, with given data, and child nodes
       data = d;
       left = l;
       right = r;
    }
 
+   /** returns child node to it's left
+    * 
+    * @return Left child node
+    */
    BinaryTreeNode<dataType> getLeft () {
-     // returns left child node
      return left; }
 
+    /** returns child node to it's left
+    * 
+    * @return Left child node
+    */
    BinaryTreeNode<dataType> getRight () {
-     // returns right child node
      return right; }
 }
