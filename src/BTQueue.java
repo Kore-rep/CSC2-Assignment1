@@ -7,14 +7,14 @@
 
  /** An object that creates a virtual queue for level order traversal
   * Similar to a linked list
-  * @param <dataType>
+  * @param <dataType> The data to be stored in this node
   */
 public class BTQueue<dataType>
 {
    BTQueueNode<dataType> head;
    BTQueueNode<dataType> tail;
 
-   /** Construcs an empty BTQueue object
+   /** Constructs an empty BTQueue object
     * 
     */
    public BTQueue ()

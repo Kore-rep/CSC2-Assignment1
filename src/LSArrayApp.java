@@ -40,10 +40,7 @@ public class LSArrayApp {
             
         } catch (IOException e) {
             System.out.println("Cannot find file");
-        }    
-
-
-        
+        }          
         
     }
 }
